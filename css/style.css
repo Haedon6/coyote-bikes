@@ -12,6 +12,8 @@ body {
 nav {
     background: #060606;
     padding: 0 0.9375rem;
+    position: fixed;
+    width: 100%;
 }
 
 a {
@@ -36,11 +38,10 @@ a {
 }
 
 .item a:hover{
-    color: #a0a0a0;
+    color: #42531b;
 }
 
 /* Hero Section */
-
 .hero {
     background-image: url(../images/coyoteHero-min.jpg);
     min-height: 23rem;
@@ -52,9 +53,10 @@ a {
 }
 
 .hero h1, .hero p {
-    padding: 5px 10px 10px 40px;
-    background-color: rgb(0, 0, 0, 0.5);
+    padding: 0.3125rem 0.625rem 0.625rem 2.5rem;
+    background-color: rgb(0, 0, 0, 0.75);
     color: #ffffff;
+    max-width: 35%;
 }
 
 .hero h1 {
@@ -65,6 +67,7 @@ a {
 
 .hero p {
     padding-top: 0;
+    margin: 0;
 }
 
 /* Showcase Section */
@@ -82,12 +85,12 @@ a {
     flex-direction: column;
     align-items: center;
     background-color: #efefef;
-    padding: 20px;
-    margin: 20px;
+    padding: 1.25rem;
+    margin: 1.25rem;
 }
 
 .product h3, p, button {
-    margin: 10px;
+    margin: 0.625rem;
     margin-bottom: 0;
 }
 
@@ -148,13 +151,19 @@ a {
 }
 
 /* Tablet Layout */
-@media screen and (max-width: 48rem) {
-    .showcase {
-        flex-direction: column;
+@media screen and (max-width: 60rem) {
+    .showcase-gallery{
+        grid-template-columns: auto auto;
     }
 }
 
 /* Mobile Layout */
 @media screen and (max-width: 26.5625rem) {
+    .hero h1, .hero p {
+        max-width: 60%;
+    }
 
+    .showcase-gallery{
+        grid-template-columns: auto;
+    }
 }
