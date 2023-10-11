@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+nav {
+    background: #060606;
+    padding: 0 0.9375rem;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu {
+    list-style-type: none;
+}
+
+.logo {
+    font-family: transducer-extended, sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.25rem;
+    padding: 0.4688rem 0.625rem 0.4688rem 0;
+}
+
+.item  {
+    padding: 0.625rem;
+}
+
+.item a:hover{
+    color: #a0a0a0;
+}
+
+/* Hero Section */
+
+.hero {
+    background-image: url(../images/coyoteHero-min.jpg);
+    min-height: 23rem;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1, .hero p {
+    padding: 5px 10px 10px 40px;
+    background-color: rgb(0, 0, 0, 0.5);
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-family: transducer-extended, sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.hero p {
+    padding-top: 0;
+}
+
+/* Showcase Section */
+.showcase {
+    padding: 1.25rem;
+}
+
+.showcase-gallery{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.product {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #efefef;
+    padding: 20px;
+    margin: 20px;
+}
+
+.product h3, p, button {
+    margin: 10px;
+    margin-bottom: 0;
+}
+
+.product img {
+    max-height: 20rem;
+}
+
+/* Mobile Menu */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu li a {
+    display: block;
+    padding: 0.9375rem 0.3125rem;
+}
+
+.toggle{
+    order: 1;
+    font-size: 1.25rem;
+}
+
+.item {
+    order: 2;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.active .item {
+    display: block;
+}
+
+/* Desktop Layout */
+@media screen and (min-width: 60rem) {
+    .menu {
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        background: none;
+    }
+
+    .logo {
+        order: 0;
+    }
+    
+    .item {
+        position: relative;
+        display: block;
+        width: auto;
+    }
+
+    .toggle {
+        display: none;
+    }
+}
+
+/* Tablet Layout */
+@media screen and (max-width: 48rem) {
+    .showcase {
+        flex-direction: column;
+    }
+}
+
+/* Mobile Layout */
+@media screen and (max-width: 26.5625rem) {
+
+}
