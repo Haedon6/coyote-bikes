@@ -38,7 +38,7 @@ a {
 }
 
 .item a:hover{
-    color: #42531b;
+    color: #3c5a35;
 }
 
 /* Hero Section */
@@ -70,14 +70,39 @@ a {
     margin: 0;
 }
 
-/* Showcase Section */
-.showcase {
-    padding: 1.25rem;
+/* Home Section*/
+.home p {
+    margin: 1.25rem;
+    line-height: 1.6;
 }
 
+.home img {
+    max-width: 21.875rem;
+    max-height: 21.875rem;
+    margin: 1.25rem;
+}
+
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 6.25rem;
+    margin-right: 6.25rem;
+    margin-top: 1.25rem;
+    background-color: #efefef;
+}
+
+.home button {
+    margin: auto;
+    margin-bottom: 3.75rem;
+    margin-top: 0.625rem;
+    width: 40%;
+    display: block;
+}
+
+/* Showcase Section */
 .showcase-gallery{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .product {
@@ -95,7 +120,31 @@ a {
 }
 
 .product img {
-    max-height: 20rem;
+    max-width: 100%;
+}
+
+h2  {
+    font-family: transducer-extended, sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    color: #ffffff;
+    background-color: #3c5a35;
+    padding: 0.625rem;
+    margin-top: 1.25rem;
+    max-width: 35%;
+}
+
+button {
+    background-color: #060606;
+    color: #ffffff;
+    border: none;
+    font-size: 1.125rem;
+    padding: 0.625rem 1.5rem;
+}
+
+button:hover {
+    background-color: #3c5a35;
+    text-decoration: underline;
 }
 
 /* Mobile Menu */
@@ -152,18 +201,50 @@ a {
 
 /* Tablet Layout */
 @media screen and (max-width: 60rem) {
+   h2 {
+    max-width: 35%;
+   }
+
+   .home-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3.125rem;
+    margin-right: 3.125rem;
+   }
+   
     .showcase-gallery{
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 /* Mobile Layout */
 @media screen and (max-width: 26.5625rem) {
+    h2 {
+        max-width: 50%;
+       }
+    
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        
+    }
+    
     .hero h1, .hero p {
-        max-width: 60%;
+        max-width: 100%;
+    }
+
+    .hero p {
+        margin-bottom: 1.25rem;
+    }
+
+    .home-content {
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
     }
 
     .showcase-gallery{
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
     }
 }
