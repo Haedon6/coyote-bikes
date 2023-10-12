@@ -10,7 +10,7 @@ body {
 }
 
 nav {
-    background: #060606;
+    background: #222222;
     padding: 0 0.9375rem;
     position: fixed;
     width: 100%;
@@ -68,6 +68,7 @@ a {
 .hero p {
     padding-top: 0;
     margin: 0;
+    font-style: italic;
 }
 
 /* Home Section*/
@@ -88,7 +89,7 @@ a {
     margin-left: 6.25rem;
     margin-right: 6.25rem;
     margin-top: 1.25rem;
-    background-color: #efefef;
+    background-color: #c9c9c9;
 }
 
 .home button {
@@ -109,7 +110,7 @@ a {
     display:flex;
     flex-direction: column;
     align-items: center;
-    background-color: #efefef;
+    background-color: #c9c9c9;
     padding: 1.25rem;
     margin: 1.25rem;
 }
