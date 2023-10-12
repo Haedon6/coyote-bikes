@@ -41,6 +41,30 @@ a {
     color: #3c5a35;
 }
 
+h2  {
+    font-family: transducer-extended, sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    color: #ffffff;
+    background-color: #3c5a35;
+    padding: 0.625rem;
+    margin-top: 1.25rem;
+    max-width: 35%;
+}
+
+button {
+    background-color: #060606;
+    color: #ffffff;
+    border: none;
+    font-size: 1.125rem;
+    padding: 0.625rem 1.5rem;
+}
+
+button:hover {
+    background-color: #3c5a35;
+    text-decoration: underline;
+}
+
 /* Hero Section */
 .hero {
     background-image: url(../images/coyoteHero-min.jpg);
@@ -95,7 +119,7 @@ a {
 .home button {
     margin: auto;
     margin-bottom: 3.75rem;
-    margin-top: 0.625rem;
+    margin-top: 1.25rem;
     width: 40%;
     display: block;
 }
@@ -104,6 +128,7 @@ a {
 .showcase-gallery{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 2.5rem;
 }
 
 .product {
@@ -124,28 +149,70 @@ a {
     max-width: 100%;
 }
 
-h2  {
-    font-family: transducer-extended, sans-serif;
-    font-weight: 500;
-    font-style: italic;
-    color: #ffffff;
-    background-color: #3c5a35;
-    padding: 0.625rem;
+/* About Section */
+.about p {
+    margin: 1.25rem;
+    line-height: 1.6;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 6.25rem;
+    margin-right: 6.25rem;
     margin-top: 1.25rem;
-    max-width: 35%;
+    margin-bottom: 3.75rem;
+    background-color: #c9c9c9;
 }
 
-button {
-    background-color: #060606;
+.about-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1.25rem;
+}
+
+.about img {
+    max-width: 17.5rem;
+    max-height: 17.5rem;
+    margin-bottom: 1.25rem;
+}
+
+/* Subscribe Section */
+.subscribe-content {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 6.25rem;
+    margin-right: 6.25rem;
+    margin-top: 1.25rem;
+    background-color: #c9c9c9;
+}
+
+.subscribe p {
+    margin: 1.25rem;
+    line-height: 1.6;
+}
+
+.subscribe img {
+    max-width: 21.875rem;
+    max-height: 21.875rem;
+    margin: 1.25rem;
+}
+
+.subscribe button {
+    width: 40%;
+    display: block;
+    margin: auto;
+    margin-bottom: 3.75rem;
+    margin-top: 1.25rem;
+}
+
+footer p {
     color: #ffffff;
-    border: none;
-    font-size: 1.125rem;
-    padding: 0.625rem 1.5rem;
-}
-
-button:hover {
     background-color: #3c5a35;
-    text-decoration: underline;
+    margin: 0;
+    padding: 2.5rem;
+    text-align: right;
 }
 
 /* Mobile Menu */
@@ -206,7 +273,7 @@ button:hover {
     max-width: 35%;
    }
 
-   .home-content {
+   .home-content, .about-content, .subscribe-content {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -222,7 +289,7 @@ button:hover {
 /* Mobile Layout */
 @media screen and (max-width: 26.5625rem) {
     h2 {
-        max-width: 50%;
+        max-width: 70%;
        }
     
     .hero {
@@ -240,12 +307,17 @@ button:hover {
         margin-bottom: 1.25rem;
     }
 
-    .home-content {
+    .home-content, .about-content, .subscribe-content {
         margin-left: 1.25rem;
         margin-right: 1.25rem;
     }
 
     .showcase-gallery{
         grid-template-columns: 1fr;
+    }
+
+    .about img {
+        max-width: 18.75rem;
+        max-height: 18.75rem;
     }
 }
